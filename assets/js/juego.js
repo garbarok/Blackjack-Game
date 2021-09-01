@@ -61,7 +61,7 @@ const miModulo = (() => {
 		return isNaN(valor) ? (valor === 'A' ? 11 : 10) : valor * 1;
 	};
 
-	// Turno: 0= primer jugador, y último ordenador
+	// Turno: 0= primer jugador, y último, ordenador
 	const acumularPuntos = (carta, turno) => {
 		puntosJugadores[turno] = puntosJugadores[turno] + valorCarta(carta);
 		puntosHTML[turno].innerText = puntosJugadores[turno];
@@ -135,9 +135,6 @@ const miModulo = (() => {
 		btnDetener.disabled = true;
 	});
 
-	// btnNuevo.addEventListener('click', () => {
-	// 	inicializarJuego();
-	// });
 	return {
 		nuevoJuego: inicializarJuego,
 	};
